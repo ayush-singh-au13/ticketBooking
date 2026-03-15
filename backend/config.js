@@ -41,7 +41,7 @@ const configs = {
     apiTimeout: 60000,
     logLevel: 'warn',
     corsOrigins: [
-      process.env.CORS_ORIGIN || 'https://app.example.com',
+      process.env.CORS_ORIGIN || 'https://ticketbooking-ym0o.onrender.com',
       'https://your-frontend.vercel.app' // Add your actual frontend URL
     ],
     db: {
