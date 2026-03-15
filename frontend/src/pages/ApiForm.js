@@ -120,6 +120,16 @@ function ApiForm() {
         options: formData.options
       };
 
+      if(payload.passengers.length === 0) {
+        setError('Please add at least one passenger');
+        setLoading(false);
+        return;
+      }
+      if(payload.routes.length === 0) {
+        setError('Please add at least one route');
+        setLoading(false);
+        return;
+      }
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
