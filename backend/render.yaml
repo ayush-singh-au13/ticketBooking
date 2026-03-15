@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ticket-booking-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: EXTERNAL_API_URL
+        value: https://onwardticket.com/api/order/search
+      - key: CORS_ORIGIN
+        generateValue: true
