@@ -116,7 +116,7 @@ function ApiForm() {
           toCityName: route.toCityName,
           date: route.date
         })),
-        passengers: formData.passengers,
+        passengers: formData.passengers.filter(passenger => passenger.count > 0),
         options: formData.options
       };
 
